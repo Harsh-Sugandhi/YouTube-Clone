@@ -1,15 +1,14 @@
-import Logo from './Logo/Logo';
 import SearchBar from "./searchbar/searchbar";
 import Profile from "./profile/profile";
-import './navbar.css';
+// import ThemeToggle from '../theme/theme-toggle';
 
 function Navbar() {
     return (
-        <div className="navbar">
-            <div className="navbar-contents">
-                {/* <Logo /> */}
+        <div className="grid w-full auto-rows-auto justify-items-center relative p-2.5">
+            <div className="w-full flex items-center justify-center">
                 <SearchBar />
                 <Profile />
+                {/* <ThemeToggle /> */}
             </div>
         </div>
     )

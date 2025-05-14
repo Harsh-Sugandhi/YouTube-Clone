@@ -1,22 +1,15 @@
-import Sidebar from './Components/sidebar/sidebar';
-import YouTubeNavbar from './Components/navabar/navbar';
-import './App.css';
-
+import Sidebar from './components/sidebar/sidebar';
+import YouTubeNavbar from './components/navabar/navbar';
 
 function App() {
-
   return (
-    <div className="app-container">
+    <div className="flex h-screen">
       <Sidebar />
-      <div className="main-content">
+      <div className="flex flex-col flex-grow">
         <YouTubeNavbar />
-        <div className="content-area">
-          {/* Add main content here */}
-          <h1>Welcome to YouTube Clone</h1>
-        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
