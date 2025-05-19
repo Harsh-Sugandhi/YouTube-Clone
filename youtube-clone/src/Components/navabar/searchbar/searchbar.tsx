@@ -1,3 +1,4 @@
+import { CiSearch } from "react-icons/ci";
 
 function SearchBar() {
     return (
@@ -8,7 +9,7 @@ function SearchBar() {
                 className="flex-1 bg-transparent border-none outline-none text-base px-2"
             />
             <button className="bg-transparent border-none cursor-pointer flex items-center justify-center px-2">
-                <i className="text-lg">🔍</i>
+                <CiSearch />
             </button>
         </div>
     );
