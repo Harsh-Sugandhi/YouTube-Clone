@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import { IoIosMenu } from 'react-icons/io';
 import { AiFillHome, AiOutlineVideoCamera } from 'react-icons/ai';
 import { MdOutlineSubscriptions, MdHistory, MdPlaylistPlay, MdWatchLater, MdSettings } from 'react-icons/md';
@@ -7,15 +7,15 @@ import { BiHelpCircle, BiFlag } from 'react-icons/bi';
 import { RiFeedbackLine } from 'react-icons/ri';
 import AppLogo from './asset/YouTube-Logo.png';
 
-function SideMenu() {
-    const [showSideMenu, setShowSideMenu] = useState(true);
+function SideMenu({ showSideMenu, setShowSideMenu }:
+    { showSideMenu: boolean, setShowSideMenu: React.Dispatch<React.SetStateAction<boolean>> }) {
 
     const toggleMenu = () => {
-        setShowSideMenu((prevState) => !prevState);
-    };
+        setShowSideMenu(!showSideMenu);
+    }
 
     return (
-        <div className={`h-screen shadow-md ${showSideMenu ? 'w-50' : 'w-20'} transition-all duration-300 overflow-y-auto`}>
+        <div className={`h-screen`}>
             <div className="flex items-center justify-between p-4">
                 <IoIosMenu size={30} onClick={toggleMenu} className="cursor-pointer" />
                 {showSideMenu &&
@@ -87,6 +87,6 @@ function SideMenu() {
             )}
         </div>
     );
-}
+};
 
 export default SideMenu;

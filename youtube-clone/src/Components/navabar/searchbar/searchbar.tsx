@@ -2,7 +2,7 @@ import { CiSearch } from "react-icons/ci";
 
 function SearchBar() {
     return (
-        <div className="flex items-center rounded-full px-4 py-2 shadow-md my-2">
+        <div className="flex items-center rounded-full px-4 py-2 my-2">
             <input
                 type="text"
                 placeholder="Search"
